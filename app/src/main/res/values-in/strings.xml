@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">submission3</string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid beatae deserunt dolor, dolore dolorem doloremque eaque earum enim est illo illum natus pariatur quos, rerum sint sit velit veniam voluptatum.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="change_language_settings">Ubah Pengaturan Bahasa</string>
+    <string name="titleTab1">Sinema</string>
+    <string name="titleTab2">Acara Tv</string>
+</resources>
