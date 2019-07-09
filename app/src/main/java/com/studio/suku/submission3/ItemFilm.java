@@ -2,19 +2,18 @@ package com.studio.suku.submission3;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.util.Log;
 
 import org.json.JSONObject;
 
-public class Items implements Parcelable {
-
+public class ItemFilm implements Parcelable {
     private String name;
     private String path_img;
     private String desc;
 
-    public Items() {
+    public ItemFilm() {
 
     }
+
 
     public String getName() {
         return name;
@@ -33,20 +32,19 @@ public class Items implements Parcelable {
     }
 
     public String getDesc() {
-        return desc;
+        return this.desc;
     }
 
     public void setDesc(String desc) {
         this.desc = desc;
     }
 
-    //This Is A Constructor To Parse The JSONObject
-    Items(JSONObject object){
+    ItemFilm(JSONObject object){
         try {
-            String name = object.getString("original_name");
+            String name = object.getString("title");
             String img = object.getString("poster_path");
             String path_img = "https://image.tmdb.org/t/p/w500/"+img;
-            String desc = object.getString("original_name");
+            String desc = object.getString("title");
 
             this.name = name;
             this.path_img = path_img;
@@ -69,21 +67,21 @@ public class Items implements Parcelable {
         dest.writeString(this.desc);
     }
 
-    protected Items(Parcel in) {
+    protected ItemFilm(Parcel in) {
         this.name = in.readString();
         this.path_img = in.readString();
         this.desc = in.readString();
     }
 
-    public static final Parcelable.Creator<Items> CREATOR = new Parcelable.Creator<Items>() {
+    public static final Parcelable.Creator<ItemFilm> CREATOR = new Parcelable.Creator<ItemFilm>() {
         @Override
-        public Items createFromParcel(Parcel source) {
-            return new Items(source);
+        public ItemFilm createFromParcel(Parcel source) {
+            return new ItemFilm(source);
         }
 
         @Override
-        public Items[] newArray(int size) {
-            return new Items[size];
+        public ItemFilm[] newArray(int size) {
+            return new ItemFilm[size];
         }
     };
 }

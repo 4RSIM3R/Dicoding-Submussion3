@@ -7,4 +7,6 @@
     <string name="change_language_settings">Change Language Settings</string>
     <string name="titleTab1">Film</string>
     <string name="titleTab2">Tv Show</string>
+    <string name="favorite_film">Favorite Film</string>
+    <string name="favorite_tv">Favorite Tv Show</string>
 </resources>

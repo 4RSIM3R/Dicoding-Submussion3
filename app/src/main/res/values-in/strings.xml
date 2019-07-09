@@ -7,4 +7,6 @@
     <string name="change_language_settings">Ubah Pengaturan Bahasa</string>
     <string name="titleTab1">Sinema</string>
     <string name="titleTab2">Acara Tv</string>
+    <string name="favorite_film">Sinema Favorit</string>
+    <string name="favorite_tv">Acara Tv Favorit</string>
 </resources>

@@ -5,4 +5,12 @@
         android:title="@string/change_language_settings"
         app:showAsAction="never">
     </item>
+    <item android:id="@+id/fav_film"
+        android:title="@string/favorite_film"
+        app:showAsAction="never">
+    </item>
+    <item android:id="@+id/fav_tv"
+        android:title="@string/favorite_tv"
+        app:showAsAction="never">
+    </item>
 </menu>

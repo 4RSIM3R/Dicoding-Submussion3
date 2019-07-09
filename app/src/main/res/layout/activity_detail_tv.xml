@@ -5,11 +5,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailFilm">
+    tools:context=".DetailTv">
 
     <ImageView
         android:scaleType="fitXY"
-        android:id="@+id/imageView"
+        android:id="@+id/imageViewTv"
         android:layout_width="match_parent"
         android:layout_height="245dp"
         android:background="@color/colorAccent"
@@ -18,19 +18,19 @@
 
     <ImageView
         android:scaleType="fitXY"
-        android:id="@+id/poster"
+        android:id="@+id/posterTv"
         android:layout_width="125dp"
         android:layout_height="175dp"
         android:layout_marginStart="32dp"
         android:layout_marginBottom="8dp"
         android:background="@color/colorPrimary"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewTv"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageViewTv" />
 
     <TextView
         android:textSize="20sp"
-        android:id="@+id/judul"
+        android:id="@+id/judulTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -39,12 +39,12 @@
         android:text="Avanger Infity Wars"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.061"
-        app:layout_constraintStart_toEndOf="@+id/poster"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintStart_toEndOf="@+id/posterTv"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewTv" />
 
     <TextView
         android:textSize="16sp"
-        android:id="@+id/production"
+        android:id="@+id/productionTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -53,11 +53,11 @@
         android:text="Hollywood"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.022"
-        app:layout_constraintStart_toEndOf="@+id/poster"
-        app:layout_constraintTop_toBottomOf="@+id/judul" />
+        app:layout_constraintStart_toEndOf="@+id/posterTv"
+        app:layout_constraintTop_toBottomOf="@+id/judulTv" />
 
     <TextView
-        android:id="@+id/desc"
+        android:id="@+id/descTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -70,11 +70,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/poster"
+        app:layout_constraintTop_toBottomOf="@+id/posterTv"
         app:layout_constraintVertical_bias="0.026" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonTv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"

@@ -1,18 +1,38 @@
 package com.studio.suku.submission3;
 
+import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
 public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.MyViewHolder> {
 
     private ArrayList<Items> itemsList = new ArrayList<>();
+
+    Context context;
+
+    private OnRowClicked onRowClicked;
+
+    public interface OnRowClicked{
+        void OnClicked(int position);
+    }
+
+    public void setOnRowClicked(OnRowClicked RowClicked){
+        onRowClicked = RowClicked;
+    }
+
+
+
+
+
 
     public void setData(ArrayList<Items> items){
         itemsList.clear();
@@ -31,6 +51,8 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.MyViewHolder> 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int i) {
         myViewHolder.bind(itemsList.get(i));
+        final int position = myViewHolder.getAdapterPosition();
+
     }
 
     @Override
@@ -45,13 +67,23 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.MyViewHolder> 
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-//            img = itemView.findViewById(R.id.img_item_photo);
-            txt = itemView.findViewById(R.id.txt_detail);
+            img = itemView.findViewById(R.id.img_item_photo);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (onRowClicked != null){
+                        int position = getAdapterPosition();
+                        if (position != RecyclerView.NO_POSITION){
+                            onRowClicked.OnClicked(position);
+                        }
+                    }
+                }
+            });
         }
 
         //There Is A Function To Bind Data
         public void bind(Items items){
-            txt.setText("Bisa");
+            Picasso.get().load(items.getPath_img()).into(img);
         }
     }
 }

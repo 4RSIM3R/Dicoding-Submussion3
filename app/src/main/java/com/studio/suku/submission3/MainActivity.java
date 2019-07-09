@@ -44,6 +44,10 @@ public class MainActivity extends AppCompatActivity {
             Intent pindah = new Intent(Settings.ACTION_LOCALE_SETTINGS);
             startActivity(pindah);
         }
+        else if (item.getItemId() == R.id.fav_film){
+            Intent pindah = new Intent(MainActivity.this, Favorite.class);
+            startActivity(pindah);
+        }
         return super.onOptionsItemSelected(item);
     }
 }
